@@ -1,0 +1,5 @@
+sudo apt install ubertooth ubertooth-btle wireshark
+python ubertooth_sniffer.py --log ble_sniff.pcap
+python ubertooth_sniffer.py --target AA:BB:CC:DD:EE:FF --log ble_sniff_filtered.pcap
+
+wireshark -r ble_sniff.pcap

@@ -1,0 +1,9 @@
+pyserial
+scapy
+argparse
+subprocess32; python_version < '3.5'
+json
+csv
+time
+random
+os

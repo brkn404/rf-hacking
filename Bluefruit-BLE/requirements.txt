@@ -1,0 +1,11 @@
+# Core Python Libraries
+pyserial==3.5
+bleak==0.21.1
+argparse
+json
+time
+random
+struct
+datetime
+os
+
