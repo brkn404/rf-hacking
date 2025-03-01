@@ -1,97 +1,129 @@
-# LimeSDR & SDR Toolset
+# **LimeSDR Mini 2.0 - Toolset for Wireless Security and Exploitation**
 
-This repository contains various scripts for security research, signal analysis, and attack automation using **LimeSDR Mini 2.0** and other SDR devices.
+The **LimeSDR Mini 2.0** is a powerful Software Defined Radio (SDR) that allows for the analysis and exploitation of various wireless communication protocols. This toolkit provides a wide range of scripts designed for **security analysis**, **penetration testing**, and **research** purposes. It supports a variety of wireless protocols, including **Wi-Fi**, **Bluetooth**, **GSM/LTE**, **IoT**, and more.
 
-## 📡 Features
-✅ **Full-Spectrum RF Signal Scanning** (10 MHz - 3.5 GHz)  
-✅ **GSM/LTE IMSI Catching & Rogue Base Station**  
-✅ **Bluetooth/BLE Sniffing & Injection**  
-✅ **Wi-Fi Exploitation (Deauth, MITM, Packet Injection)**  
-✅ **GPS Spoofing & Navigation Attacks**  
-✅ **ADS-B Aircraft Spoofing & Aviation Interference**  
-✅ **RF Jamming & Denial-of-Service Attacks**  
-✅ **Passive Keyless Entry (PKE) Exploitation for Vehicles**  
-✅ **Covert RF Data Exfiltration (FM, LoRa, BLE, AM)**  
-✅ **IoT & Industrial RF Attacks (Zigbee, LoRa, SCADA)**  
-
-## 📂 Script Overview
-
-### **LimeSDR-Specific Scripts**
-
-| Script | Description |
-|--------|-------------|
-| **limesdr_lte_emulator.py** | Simulates & intercepts LTE signals, rogue cell tower attacks |
-| **limesdr_pke_exploit.py** | Captures & replays signals from keyless car fobs, garage doors |
-| **limesdr_radio_transmitter.py** | Transmits FM/AM/SSB radio messages & covert audio |
-| **limesdr_rf_exfiltration.py** | Leaks data via RF using stego, LoRa, BLE, and more |
-| **limesdr_satellite_sniffer.py** | Captures signals from GPS, Iridium, Inmarsat satellites |
-| **limesdr_spectrum_analyzer.py** | Monitors spectrum & detects unauthorized transmissions |
-| **limesdr_voice_decoder.py** | Decodes TETRA, P25, DMR digital radio communications |
-
-### **General SDR Attack Scripts**
-
-| Script | Description |
-|--------|-------------|
-| **sdr_adsb_spoof.py** | Spoofs aircraft locations on ATC radar |
-| **sdr_auto_pwn.py** | Automates cross-protocol MITM attacks (GSM, Wi-Fi, Bluetooth) |
-| **sdr_bt_hijack.py** | Hijacks & injects Bluetooth packets into active connections |
-| **sdr_gps_spoof.py** | Transmits fake GPS signals to manipulate location services |
-| **sdr_imsi_catcher.py** | Captures IMSI/IMEI numbers, intercepts GSM communications |
-| **sdr_iot_exploit.py** | Exploits LoRa, Zigbee, SCADA, & industrial RF systems |
-| **sdr_replay_attack.py** | Records & replays RF signals for remote controls, alarms |
-| **sdr_rf_jammer.py** | Jams Bluetooth, Wi-Fi, GSM, & IoT frequencies |
-| **sdr_rf_scanner.py** | Scans RF spectrum & detects active transmissions |
-| **sdr_wifi_attack.py** | Wi-Fi exploitation: deauth, MITM, rogue AP, credential capture |
-
-## ⚙️ Setup
-
-1️⃣ **Install Required Dependencies:**  
-```bash
-sudo apt update && sudo apt install -y gnuradio soapy-sdr limeutils aircrack-ng wireshark
-```
-
-2️⃣ **Install SDR Software:**  
-```bash
-pip install soapy_power stegoRF srsLTE gr-bluetooth
-```
-
-3️⃣ **Connect Your SDR & Verify:**  
-```bash
-SoapySDRUtil --find
-```
-
-## 🔥 Example Usage
-
-🔹 **Scan RF Spectrum for Active Signals:**  
-```bash
-python sdr_rf_scanner.py --freq-start 50M --freq-end 3.5G
-```
-
-🔹 **Intercept & Modify Bluetooth Communications:**  
-```bash
-python sdr_bt_hijack.py --scan --inject "Hello World"
-```
-
-🔹 **Rogue LTE Base Station:**  
-```bash
-python limesdr_lte_emulator.py --start --freq 850M
-```
-
-🔹 **Jam Nearby Wi-Fi Networks:**  
-```bash
-python sdr_wifi_attack.py --deauth --target 00:11:22:33:44:55
-```
-
-🔹 **Covert RF Data Exfiltration (Stego & LoRa):**  
-```bash
-python limesdr_rf_exfiltration.py --stego --lora --file secret.txt
-```
-
-## 🚀 Disclaimer
-**For educational and research purposes only.** Unauthorized use of these tools may violate laws and regulations. The user assumes all responsibility.
+## **📡 Key Features:**
+- Full-spectrum RF scanning (10 MHz - 3.5 GHz)
+- IMSI catching and rogue base stations
+- Bluetooth sniffing, injection, and MITM
+- Wi-Fi deauthentication, MITM, and packet injection
+- Covert RF data exfiltration (FM, LoRa, BLE)
+- GSM/LTE attack automation
+- GPS spoofing and navigation attacks
+- Satellite signal sniffing
 
 ---
 
-### **What’s Next?**
-Would you like **automated frequency-hopping attacks**, **coordinated multi-device attacks**, or **custom SDR fuzzing tools?** 🚀
+## **📂 Script Overview**
+
+### **LimeSDR-Specific Scripts:**
+
+1. **`limesdr_lte_emulator.py`**  
+   - Simulates and creates a **rogue LTE base station**, enabling **man-in-the-middle** (MITM) attacks on mobile devices and testing LTE vulnerabilities.
+
+2. **`limesdr_pke_exploit.py`**  
+   - Captures and replays signals from **keyless entry** systems such as **vehicles** and **garage doors**, enabling **unauthorized access**.
+
+3. **`limesdr_radio_transmitter.py`**  
+   - Transmits **FM**, **AM**, and **SSB** signals for **covert communication** or testing communication systems, providing a versatile signal transmission tool.
+
+4. **`limesdr_rf_exfiltration.py`**  
+   - Facilitates **covert RF data exfiltration** using **steganography** over RF channels (LoRa, BLE, FM, AM) for secure data transfer.
+
+5. **`limesdr_satellite_sniffer.py`**  
+   - Sniffs and captures signals from **satellite communication networks**, including **GPS**, **Iridium**, and **Inmarsat** satellites, useful for satellite signal analysis.
+
+6. **`limesdr_spectrum_analyzer.py`**  
+   - Scans the **RF spectrum** and detects **unauthorized transmissions** to analyze signal activity across various frequencies.
+
+7. **`limesdr_voice_decoder.py`**  
+   - Decodes and intercepts **TETRA**, **P25**, and **DMR** digital radio communications, enabling **eavesdropping** on critical voice transmissions.
+
+---
+
+### **General SDR Attack Scripts:**
+
+1. **`sdr_adsb_spoof.py`**  
+   - Spoofs **ADS-B** signals, which are used for **aircraft tracking** and **control**, enabling interference with air traffic control systems.
+
+2. **`sdr_auto_pwn.py`**  
+   - Automates **cross-protocol MITM attacks** (GSM, Wi-Fi, Bluetooth, IoT), providing a seamless exploitation workflow across wireless systems.
+
+3. **`sdr_bt_hijack.py`**  
+   - Hijacks **Bluetooth packets** in an active connection, allowing for **packet manipulation** and **MITM attacks** on Bluetooth devices.
+
+4. **`sdr_gps_spoof.py`**  
+   - Transmits **fake GPS signals**, enabling location manipulation for **GPS spoofing** attacks on navigation and tracking systems.
+
+5. **`sdr_imsi_catcher.py`**  
+   - Captures **IMSI/IMEI** numbers from **mobile devices**, enabling **device tracking** or **eavesdropping** on GSM communications.
+
+6. **`sdr_iot_exploit.py`**  
+   - Exploits vulnerabilities in **IoT** devices, targeting **Zigbee**, **LoRa**, **SCADA**, and other industrial IoT systems for remote attacks.
+
+7. **`sdr_rf_jammer.py`**  
+   - Jams multiple wireless frequencies (**Wi-Fi**, **Bluetooth**, **GSM**, **IoT**) to disrupt communication and perform **Denial of Service** (DoS) attacks.
+
+8. **`sdr_replay_attack.py`**  
+   - Records and replays **RF signals** from devices such as **remote controls**, alarms, or IoT systems to gain **unauthorized access** or control.
+
+9. **`sdr_rf_scanner.py`**  
+   - Scans the **RF spectrum** to detect **active signals** and identify potential vulnerabilities or rogue transmissions.
+
+10. **`sdr_wifi_attack.py`**  
+   - Exploits **Wi-Fi networks**, performing attacks such as **deauthentication**, **MITM**, rogue access points, and **credential capture**.
+
+---
+
+## **📋 Example Usage**
+
+#### **Scan RF Spectrum for Active Signals:**
+
+python limesdr_spectrum_analyzer.py --start-freq 100M --end-freq 3.5G
+
+Simulate Rogue LTE Base Station:
+
+python limesdr_lte_emulator.py --freq 850M
+
+Hijack Bluetooth Communications:
+
+python sdr_bt_hijack.py --scan --inject "Malicious Payload"
+
+Covert Data Exfiltration Using LoRa:
+
+python limesdr_rf_exfiltration.py --stego --lora --file secret_data.txt
+
+Wi-Fi Network Attack (Deauthentication):
+
+python sdr_wifi_attack.py --deauth --target "00:11:22:33:44:55"
+
+Interception of Satellite Signals:
+
+python limesdr_satellite_sniffer.py --freq 1.5G --protocol GPS
+
+Spoof ADS-B Signals for Aircraft:
+
+python sdr_adsb_spoof.py --freq 1090M
+
+Perform Automated Attack on IoT Devices:
+
+python sdr_auto_pwn.py --target "IoT Device" --attack-type "MITM"
+
+Intercept and Decode Voice Communication (TETRA):
+
+python limesdr_voice_decoder.py --decode TETRA
+
+🚨 Legal Disclaimer:
+
+This toolset is intended for ethical hacking, security research, and educational purposes only. Unauthorized use of these tools may violate laws and regulations. The user assumes all responsibility for their actions.
+🔧 Setup Instructions
+
+Install Required Dependencies: Ensure your system is updated and install necessary packages:
+
+sudo apt-get update && sudo apt-get install -y gnuradio soapy-sdr limeutils aircrack-ng wireshark
+
+Install SDR Libraries: Install SDR-specific libraries:
+
+pip install soapy_power stegoRF srsLTE gr-bluetooth
+
 
