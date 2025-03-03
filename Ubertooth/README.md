@@ -1,173 +1,189 @@
-Ubertooth BLE Hacking Toolkit
+# Ubertooth One Overview
 
-This repository contains offensive & defensive BLE security tools designed specifically for use with the Ubertooth One. Ubertooth is a powerful open-source platform for Bluetooth sniffing, active attacks, and analysis.
-What is Ubertooth One?
+The **Ubertooth One** is an open-source **2.4 GHz Bluetooth transceiver** designed for security researchers and RF hackers. Developed by Great Scott Gadgets, it provides powerful capabilities for **Bluetooth sniffing, tracking, and active attacks**, making it an essential tool for penetration testing and wireless security analysis.
 
-Ubertooth One is a 2.4 GHz Bluetooth sniffer and transceiver that supports both Classic Bluetooth (BR/EDR) and Bluetooth Low Energy (BLE). Unlike most consumer BLE adapters, Ubertooth can operate in promiscuous mode, meaning it can capture and analyze raw BLE traffic, including encrypted packets.
-Capabilities of Ubertooth One
-Feature	Description
-✅ Promiscuous Mode	Captures all BLE traffic, including devices not directly paired with your system.
-✅ BLE Packet Sniffing	Intercept and decode BLE advertisements, connections, and encrypted traffic.
-✅ Real-Time BLE MITM Attacks	Modify and forward BLE packets in real-time for Man-in-the-Middle attacks.
-✅ BLE Deauthentication & Jamming	Disrupt BLE connections by sending malformed packets and advertising floods.
-✅ BLE Device Cloning & Impersonation	Replay BLE advertisements to spoof trusted devices (e.g., BLE door badges, fitness trackers).
-✅ BLE Fuzzing & Exploitation	Brute-force BLE characteristics and discover hidden commands.
-✅ Advanced BLE Hidden Service Scanning	Find stealth-mode AirTags, Tile trackers, and BLE malware beacons.
-✅ BLE Packet Injection & Replay	Modify sensor data, authentication keys, and control signals for targeted attacks.
-✅ Bluetooth Classic (BT BR/EDR) Sniffing	Capture and analyze Bluetooth Classic traffic (not just BLE).
-✅ Custom BLE Firmware & Development	Modify Ubertooth's firmware for custom BLE hacking tools.
-Use Cases for Ubertooth One
+## **Key Features**
 
-Ubertooth is widely used in cybersecurity research, penetration testing, and IoT security analysis. Below are some common real-world attack scenarios:
-1️⃣ Sniffing and Capturing BLE Traffic
+- **Frequency Range:** 2.4 GHz ISM Band (2402-2480 MHz)
+- **Supported Protocols:** Bluetooth Low Energy (BLE) & Bluetooth Classic (BR/EDR)
+- **Packet Sniffing:** Captures raw Bluetooth traffic, including encrypted packets
+- **Transmission Capabilities:** Injects custom Bluetooth packets for testing
+- **Promiscuous Mode:** Monitors all Bluetooth connections in range
+- **Compatibility:** Works with **Wireshark, GNU Radio, Bettercap, and Ubertooth Tools**
+- **Connectivity:** USB interface with software-defined control
+- **Operating Modes:** Passive Sniffing, MITM Attacks, Jamming, Injection, and Device Cloning
 
-    Intercept BLE communications between devices and log all activity.
-    Analyze unencrypted data in Wireshark for vulnerabilities.
-    Monitor BLE beacons for tracking and surveillance applications.
+## **Use Cases in Bluetooth Security**
 
-2️⃣ BLE MITM Attacks (Man-in-the-Middle)
+The **Ubertooth One** is widely used for **analyzing and attacking Bluetooth security mechanisms**. Below are some common applications:
 
-    Modify BLE packets on-the-fly.
-    Intercept authentication and pairing requests.
-    Inject malicious data into BLE-enabled applications.
+### **1️⃣ Bluetooth Sniffing & Passive Monitoring**
+- Captures BLE & Classic Bluetooth packets in real-time
+- Monitors Bluetooth advertisements and connection events
+- Logs pairing requests and identifies active devices
 
-3️⃣ BLE Deauthentication & Jamming
+### **2️⃣ Bluetooth MITM (Man-in-the-Middle) Attacks**
+- Intercepts and modifies Bluetooth communication
+- Relays authentication sequences for **unauthorized access**
+- Exploits **weak pairing and encryption vulnerabilities**
 
-    Disrupt BLE connections to force re-authentication.
-    Jamming BLE advertisements to prevent new device pairings.
-    Target specific BLE devices for selective interference.
+### **3️⃣ Bluetooth Device Cloning & Impersonation**
+- Spoofs legitimate Bluetooth devices
+- Clones BLE beacons and custom advertisements
+- Bypasses **smart locks, fitness trackers, and access control systems**
 
-4️⃣ BLE Device Cloning & Impersonation
+### **4️⃣ Bluetooth Replay Attacks**
+- Captures and replays **authentication packets**
+- Exploits static pairing sequences for unauthorized access
 
-    Replay stolen BLE advertisements to mimic a trusted device.
-    Spoof smart locks, access badges, and fitness trackers.
-    Bypass security checkpoints and authentication gates.
+### **5️⃣ Bluetooth Jamming & Denial-of-Service (DoS)**
+- Disrupts active Bluetooth connections
+- Sends malformed packets to **force device disconnection**
+- Prevents new device pairings and locks devices in pairing mode
 
-5️⃣ BLE Fuzzing & Exploitation
+### **6️⃣ AirTag & BLE Tracker Hunting**
+- Detects hidden Apple AirTags and other BLE tracking devices
+- Identifies rogue Bluetooth tracking beacons used for surveillance
 
-    Brute-force BLE characteristics to find hidden commands.
-    Crash or exploit vulnerable BLE devices.
-    Modify authentication parameters to bypass security.
+### **7️⃣ Bluetooth Keystroke Injection & HID Attacks**
+- Hijacks Bluetooth keyboards and mice
+- Injects fake keystrokes to execute remote commands
+- Exploits weak Bluetooth HID authentication mechanisms
 
-6️⃣ Bluetooth Classic (BT BR/EDR) Attacks
-
-    Sniff Bluetooth keyboard & mouse traffic.
-    Analyze audio device communications.
-    Hijack Bluetooth connections for injection attacks.
-
-Planned Scripts for Ubertooth One
-
-Now that we've outlined Ubertooth's capabilities & use cases, here’s the roadmap for Ubertooth scripts:
-Script	Description
-ubertooth_sniffer.py	Sniff BLE & Bluetooth Classic traffic and save to PCAP format for Wireshark analysis.
-ubertooth_mitm.py	Perform a Man-in-the-Middle (MITM) attack on BLE connections. Modify and relay packets in real-time.
-ubertooth_jamming.py	Deauthenticate and jam BLE devices by sending malformed or flood packets.
-ubertooth_cloner.py	Clone and impersonate BLE devices by replaying captured advertisement packets.
-ubertooth_fuzzer.py	Fuzz BLE characteristics to find hidden services and exploit vulnerable devices.
-ubertooth_bt_classic.py	Sniff and analyze Bluetooth Classic (BR/EDR) traffic. Can be used for keyboard, mouse, and audio sniffing.
+## **Software & Tools**
+- **Wireshark:** Analyze captured Bluetooth packets
+- **Bettercap:** Bluetooth security testing & MITM attacks
+- **Ubertooth Tools:** Native tools for sniffing and monitoring
+- **Bluetooth Pentesting Frameworks:** Works with **Btlejack, CrackLE, and BlueHydra**
 
 
+# Ubertooth Hacking Toolkit
 
+## Overview
+The **Ubertooth Hacking Toolkit** is a collection of scripts designed to extend the capabilities of the **Ubertooth One** for **Bluetooth (BLE & Classic) security testing, tracking, jamming, exploitation, and bypass attacks**. These scripts enhance Bluetooth penetration testing beyond standard tools like Flipper Zero.
 
-Ubertooth Bluetooth Attack Toolkit
-Overview
+## Requirements
+- **Ubertooth One** (Bluetooth security research tool)
+- **Python 3.x**
+- **Required Libraries:** `ubertooth`, `scapy`, `bleak`, `pybluez`
 
-This repository contains a collection of Ubertooth-based Bluetooth attack scripts, including tools for MITM attacks, jamming, device impersonation, fuzzing, and more. These scripts are designed for Bluetooth Classic & BLE security research, penetration testing, and red teaming.
+## Scripts & Features
 
-    ⚠ Disclaimer: These scripts are for educational & authorized security testing purposes only. Unauthorized use against systems you do not own or have explicit permission to test is illegal.
+### **1️⃣ Bluetooth BLE DoS Attack** (`ubertooth_ble_dos.py`)
+- Performs **Denial-of-Service (DoS)** attacks on BLE devices
+- Floods advertising channels to disrupt connectivity
 
-Setup & Installation
-Install Required Dependencies
+### **2️⃣ Bluetooth Classic Downgrade Attack** (`ubertooth_classic_downgrade.py`)
+- Forces Bluetooth connections to **downgrade to insecure protocols**
+- Exploits legacy encryption weaknesses
 
-    Install Ubertooth tools:
+### **3️⃣ AirTag & BLE Tracker Finder** (`ubertooth_airtag_tracker.py`)
+- Scans for **Apple AirTags, FindMy devices, and hidden BLE trackers**
+- Detects unauthorized tracking attempts
 
-sudo apt install ubertooth ubertooth-btle hcitool bluez gatttool btmgmt
+### **4️⃣ Exploiting IoT Bluetooth Devices** (`ubertooth_iot_exploit.py`)
+- Targets **smart home devices, locks, and IoT sensors** using insecure BLE implementations
+- Extracts pairing keys and sensitive data
 
-Install required Python libraries:
+### **5️⃣ Smart Lock Bypass** (`ubertooth_smart_lock_bypass.py`)
+- Bypasses BLE-based smart locks using replay attacks
+- Exploits weak key exchange mechanisms
 
-    pip install -r requirements.txt
+### **6️⃣ Bluetooth L2CAP Packet Injection** (`ubertooth_l2cap_inject.py`)
+- Injects custom **L2CAP packets** into active Bluetooth connections
+- Exploits Bluetooth protocol vulnerabilities
 
-Available Ubertooth Scripts
-Bluetooth Classic & BLE Sniffing
+### **7️⃣ Beacon Spoofing & Fake BLE Advertisements** (`ubertooth_beacon_spoof.py`)
+- Spoofs BLE advertisements for **tracking evasion and testing security flaws**
+- Fakes iBeacon, Eddystone, and custom beacons
 
-    ubertooth_bt_classic.py – Sniffs Bluetooth Classic (BR/EDR) traffic, used for keyboard, mouse, and audio sniffing.
-    ubertooth_ble_dos.py – Performs BLE Denial-of-Service (DoS) attacks by flooding connections.
-    ubertooth_rssi_tracking.py – Uses RSSI data to estimate Bluetooth device location and track movement.
-    ubertooth_live_monitor.py – Real-time Bluetooth traffic dashboard for monitoring active devices.
-    ubertooth_sniffer.txt – Configuration file for Ubertooth sniffing.
+### **8️⃣ HID Bluetooth Keyboard/Mouse Hijacking** (`ubertooth_hid_hijack.py`)
+- Hijacks Bluetooth keyboards and mice
+- Injects fake keystrokes and commands remotely
 
-Man-in-the-Middle (MITM) Attacks
+### **9️⃣ Ubertooth SDR Bridge** (`ubertooth_sdr_bridge.py`)
+- Integrates Ubertooth with **SDR tools for cross-protocol analysis**
+- Bridges Bluetooth analysis with SDR-based RF research
 
-    ble_mitm_ubertooth.py – BLE MITM attack that captures & modifies Bluetooth traffic.
-    ubertooth_bt_classic_mitm.py – MITM attack targeting Bluetooth Classic devices.
-    ubertooth_persistent_mitm.py – Creates a persistent MITM channel between Bluetooth devices for long-term traffic interception.
+### **🔟 Advanced Bluetooth Hopping & Sniffing** (`ubertooth_adv_hopping.py`)
+- Implements advanced **adaptive frequency hopping (AFH) sniffing**
+- Tracks BLE devices in real-time over large distances
 
-Device Spoofing & Cloning
+### **11️⃣ Persistent Bluetooth MITM Attack** (`ubertooth_persistent_mitm.py`)
+- Performs long-term **Man-in-the-Middle (MITM) attacks**
+- Captures Bluetooth Classic & BLE data for extended periods
 
-    ubertooth_cloner.py – Clones and impersonates BLE devices by replaying captured advertisement packets.
-    ubertooth_beacon_spoof.py – Spoofs BLE beacons (AirTags, Tile, IoT sensors) for impersonation attacks.
-    ubertooth_airtag_tracker.py – Detects & tracks hidden BLE AirTags & smart trackers used for stalking.
-    ubertooth_hid_hijack.py – Hijacks Bluetooth HID devices (keyboards, mice) and takes control.
-    ubertooth_keystroke_inject.py – Injects keystrokes into vulnerable Bluetooth keyboards using captured HID packets.
+### **12️⃣ Mass Bluetooth Deauthentication Attack** (`ubertooth_mass_deauth.py`)
+- Deauthenticates multiple BLE & Classic devices at once
+- Disrupts Bluetooth connections in high-density areas
 
-Denial-of-Service & Jamming
+### **13️⃣ Stealth Bluetooth Sniffing** (`ubertooth_stealth_sniff.py`)
+- Captures Bluetooth packets **without detection**
+- Avoids detection by Bluetooth security monitoring systems
 
-    ble_jamming_attack.py – BLE jamming & deauthentication attack against Bluetooth Low Energy devices.
-    ubertooth_mass_deauth.py – Jams and deauths all Bluetooth Classic & BLE devices in range for maximum disruption.
-    ubertooth_classic_downgrade.py – Forces Bluetooth Classic connections to downgrade encryption, making them easier to MITM.
-    ubertooth_ble_dos.py – Floods BLE channels to deny service to devices.
+### **14️⃣ Bluetooth RSSI Tracking** (`ubertooth_rssi_tracking.py`)
+- Tracks Bluetooth devices based on **Received Signal Strength Indicator (RSSI)**
+- Identifies location and movement of target devices
 
-Bluetooth Fuzzing & Exploits
+### **15️⃣ Bluetooth Classic MITM Attack** (`ubertooth_bt_classic_mitm.py`)
+- Performs **MITM attacks on Bluetooth Classic devices**
+- Captures authentication keys and sensitive communication
 
-    ubertooth_fuzzer.py – Performs Bluetooth fuzzing to discover vulnerabilities in Bluetooth stacks.
-    ubertooth_l2cap_inject.py – Injects malicious L2CAP packets to exploit Bluetooth protocol weaknesses.
-    ubertooth_pairing_hijack.py – Intercepts Bluetooth pairing requests & exploits weak authentication.
-    ubertooth_smart_lock_bypass.py – Bypasses Bluetooth-based smart locks using brute-force or replay attacks.
-    ubertooth_iot_exploit.py – Targets IoT devices with insecure BLE implementations (smart thermostats, security systems, etc.).
-    ubertooth_replay.py – Replays captured Bluetooth packets to replicate device behavior.
+### **16️⃣ Auto-PWN Bluetooth Exploitation** (`ubertooth_auto_pwn.py`)
+- Scans, detects, and **automatically exploits vulnerable Bluetooth devices**
+- Automates attacks for quick penetration testing
 
-Advanced Attacks & Enhancements
+### **17️⃣ Bluetooth Keystroke Injection** (`ubertooth_keystroke_inject.py`)
+- Injects **malicious keystrokes** into paired Bluetooth keyboards
+- Remotely executes commands on compromised devices
 
-    ubertooth_adv_hopping.py – Implements adaptive frequency hopping to improve packet capture efficiency across changing channels.
-    ubertooth_sdr_bridge.py – Bridges Ubertooth with SDR devices (HackRF, LimeSDR) for expanded Bluetooth analysis & attack capabilities.
-    ubertooth_auto_pwn.py – Automates scanning, MITM, pairing hijack, and deauth into one script for full attack automation.
-    ubertooth_stealth_sniff.py – Passive sniffing mode that reduces detection risk by adjusting scan timing and packet injection.
+### **18️⃣ Live Bluetooth Monitoring** (`ubertooth_live_monitor.py`)
+- Provides **real-time monitoring** of Bluetooth traffic
+- Detects rogue devices, attacks, and anomalies
 
-Usage Examples
-Sniff BLE Devices
+### **19️⃣ Bluetooth Audio Sniffing** (`ubertooth_audio_sniffer.py`)
+- Captures **unencrypted Bluetooth audio streams**
+- Sniffs conversations from vulnerable Bluetooth headsets
 
-python ubertooth_bt_classic.py --scan
+### **20️⃣ Bluetooth Deauthentication Tracker** (`ubertooth_deauth_tracker.py`)
+- Detects Bluetooth **deauthentication attacks in real-time**
+- Monitors Bluetooth networks for **disconnection attempts**
 
-Perform a BLE MITM Attack
+## Usage Examples
 
-python ble_mitm_ubertooth.py --target AA:BB:CC:DD:EE:FF
+### Scan for Nearby BLE Devices:
+```sh
+python ubertooth_airtag_tracker.py --scan
+```
 
-Jam All BLE Devices
+### Perform a Bluetooth DoS Attack:
+```sh
+python ubertooth_ble_dos.py --target XX:XX:XX:XX:XX:XX
+```
 
-python ble_jamming_attack.py --jam-all
+### Hijack a Bluetooth Keyboard:
+```sh
+python ubertooth_hid_hijack.py --listen
+```
 
-Bypass a Bluetooth Smart Lock
+### Spoof a Bluetooth Beacon:
+```sh
+python ubertooth_beacon_spoof.py --profile iBeacon
+```
 
-python ubertooth_smart_lock_bypass.py --target AA:BB:CC:DD:EE:FF --replay unlock_packet.bin
+### Track Bluetooth Devices via RSSI:
+```sh
+python ubertooth_rssi_tracking.py --target XX:XX:XX:XX:XX:XX
+```
 
-Track a Suspicious AirTag
+### Launch a Bluetooth MITM Attack:
+```sh
+python ubertooth_bt_classic_mitm.py --target XX:XX:XX:XX:XX:XX
+```
 
-python ubertooth_airtag_tracker.py --monitor
+## Disclaimer
+🚨 **For educational and security testing purposes only!** 🚨  
+Do **not** use these tools on unauthorized systems. The author is **not responsible** for any misuse or legal consequences.
 
-Legal Disclaimer
-
-This repository is strictly for educational and authorized penetration testing purposes only.
-Do not use these tools against networks, systems, or devices you do not own or have explicit permission to test.
-Unauthorized access to networks and devices is illegal and punishable by law.
-
-    Use responsibly. 🚀
-
-Credits
-
-Developed & maintained for Bluetooth security research, red teaming, & penetration testing.
-
-If you find this repository useful, consider contributing or reporting issues! 🚀
-
-This README.md file is now fully formatted & ready to be dropped into your project. Let me know if you need further modifications! 🚀
-
-
+---
+🔥 **Ubertooth Hacking Toolkit** - Expand Bluetooth penetration testing! 🚀

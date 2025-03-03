@@ -1,6 +1,66 @@
-# **LimeSDR Mini 2.0 - Toolset for Wireless Security and Exploitation**
+# LimeSDR Mini 2.0 Overview
 
-The **LimeSDR Mini 2.0** is a powerful Software Defined Radio (SDR) that allows for the analysis and exploitation of various wireless communication protocols. This toolkit provides a wide range of scripts designed for **security analysis**, **penetration testing**, and **research** purposes. It supports a variety of wireless protocols, including **Wi-Fi**, **Bluetooth**, **GSM/LTE**, **IoT**, and more.
+The **LimeSDR Mini 2.0** is a **powerful and compact software-defined radio (SDR)** designed for **wideband RF signal processing, wireless security research, and digital communication analysis**. Developed by **Lime Microsystems**, it is widely used by **security researchers, RF hackers, and wireless engineers** for **LTE, GSM, Wi-Fi, Bluetooth, GPS, and IoT security testing**.
+
+## **Key Features**
+
+- **Frequency Range:** 10 MHz – 3.5 GHz
+- **Bandwidth:** Up to **40 MHz**
+- **Duplexing:** Full-duplex, MIMO (1 TX / 1 RX)
+- **Modulation Support:** AM, FM, PSK, QAM, OFDM, FSK, and more
+- **Transceiver:** Lime Microsystems **LMS7002M** FPGA-based SDR
+- **Connectivity:** USB 3.0 for high-speed data transfer
+- **Software Compatibility:** Works with **GNU Radio, SDR++, LimeSuite, GQRX, OpenAirInterface, YateBTS, and more**
+- **Operating Modes:** Sniffing, Transmitting, Jamming, Replay Attacks, LTE/5G Testing, IMSI Catching
+
+## **Use Cases in Wireless Security & RF Research**
+
+The **LimeSDR Mini 2.0** is commonly used for **testing and analyzing wireless communication protocols**. Below are some key applications:
+
+### **1️⃣ Cellular Network Analysis & IMSI Catching**
+- Sniffs **GSM, LTE, and 5G signals** for security testing
+- Captures IMSI numbers for **IMSI catcher research**
+- Simulates **Rogue BTS (Base Station)** for **cell interception testing**
+
+### **2️⃣ Wi-Fi & Bluetooth Security Testing**
+- Sniffs **2.4 GHz & 5 GHz Wi-Fi signals**
+- Captures **Bluetooth (BLE & Classic) packets**
+- Performs **Wi-Fi deauthentication, jamming, and rogue AP attacks**
+
+### **3️⃣ RF Jamming & Denial-of-Service Attacks**
+- Selectively **jams specific wireless signals** (Wi-Fi, Bluetooth, GSM, LTE, Zigbee, and more)
+- Uses **adaptive frequency hopping to avoid detection**
+- Disrupts RF communication for **penetration testing**
+
+### **4️⃣ GPS Spoofing & GNSS Analysis**
+- Simulates and **spoofs GPS signals** for testing navigation security
+- Captures **GNSS signals (GPS, Galileo, GLONASS)**
+- Analyzes GPS vulnerabilities in **navigation and drone security**
+
+### **5️⃣ IoT & Smart Home Security Research**
+- Sniffs and analyzes **Zigbee, LoRa, and sub-GHz RF protocols**
+- Tests **RFID/NFC vulnerabilities** in access control systems
+- Exploits **insecure IoT communication channels**
+
+### **6️⃣ Airband & Satellite Communication Monitoring**
+- Decodes **air traffic control (ATC) and ADS-B signals**
+- Monitors **NOAA weather satellites and Inmarsat communications**
+- Explores **military and emergency radio bands**
+
+### **7️⃣ Amateur Radio & SDR Experimentation**
+- Transmits and receives **HAM radio signals**
+- Supports **digital modes (FT8, DMR, D-STAR, etc.)**
+- Works as a **low-cost spectrum analyzer**
+
+## **Software & Tools**
+- **LimeSuite:** Official configuration tool for LimeSDR
+- **GNU Radio & SDR++:** Signal processing & RF analysis
+- **OpenAirInterface & YateBTS:** LTE/5G base station simulation
+- **GQRX & CubicSDR:** SDR signal visualization
+- **Kalibrate-RTL:** GSM network frequency scannin
+
+
+# **LimeSDR Mini 2.0 - Toolset for Wireless Security and Exploitation**
 
 ## **📡 Key Features:**
 - Full-spectrum RF scanning (10 MHz - 3.5 GHz)

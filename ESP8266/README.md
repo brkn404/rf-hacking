@@ -1,3 +1,58 @@
+# ESP8266 Overview
+
+The **ESP8266** is a low-cost, **Wi-Fi-enabled microcontroller** developed by **Espressif Systems**. It is widely used for **IoT projects, wireless security testing, and network penetration testing** due to its compact size, powerful features, and ability to operate as a **Wi-Fi client, access point, or packet injection tool**.
+
+## **Key Features**
+
+- **Wi-Fi Support:** 802.11 b/g/n (2.4 GHz)
+- **Processor:** 32-bit Tensilica L106, running at 80-160 MHz
+- **Memory:** 64 KB RAM, 4 MB Flash (varies by model)
+- **Operating Modes:** Client, SoftAP, Promiscuous mode
+- **Network Security Testing:** Supports **deauthentication, sniffing, replay attacks, and rogue APs**
+- **Power Efficiency:** Low-power operation with deep sleep support
+- **Connectivity:** UART, SPI, I2C, PWM, ADC
+- **Programming Support:** Works with **Arduino IDE, MicroPython, and AT commands**
+
+## **Use Cases in Wireless Security**
+
+The **ESP8266** is commonly used for **Wi-Fi penetration testing and IoT security analysis**. Below are some key applications:
+
+### **1️⃣ Wi-Fi Sniffing & Packet Injection**
+- Captures **unencrypted Wi-Fi packets** in monitor mode
+- Injects malicious packets into Wi-Fi traffic for **exploitation testing**
+- Works with **Wireshark and Bettercap** for traffic analysis
+
+### **2️⃣ Wi-Fi Deauthentication & Jamming Attacks**
+- Performs **Wi-Fi deauth attacks** to disconnect users from a network
+- Used for **testing WPA/WPA2 security and rogue AP detection**
+- Disrupts specific clients without affecting the entire network
+
+### **3️⃣ Rogue Access Point (Evil Twin Attacks)**
+- Creates a **fake Wi-Fi network** that mimics real SSIDs
+- Captures **credentials and user traffic** for penetration testing
+- Uses **ESP8266 Deauther and Bettercap** for automation
+
+### **4️⃣ IoT Device Security Testing**
+- Exploits insecure **IoT devices and smart home networks**
+- Sniffs **MQTT, CoAP, and HTTP traffic** from IoT devices
+- Tests **weak authentication mechanisms in smart home devices**
+
+### **5️⃣ WPA Handshake Capture & Dictionary Attacks**
+- Captures **WPA/WPA2 handshakes for offline cracking**
+- Automates handshake logging for **brute-force testing**
+- Integrates with **Hashcat and Aircrack-ng** for password recovery
+
+### **6️⃣ Wi-Fi Network Scanning & Reconnaissance**
+- Scans for **Wi-Fi networks, connected devices, and open ports**
+- Logs SSIDs, MAC addresses, signal strength (RSSI), and security protocols
+- Helps identify **vulnerable networks and misconfigured access points**
+
+## **Software & Tools**
+- **ESP8266 Deauther:** Wi-Fi penetration testing framework
+- **Bettercap & Aircrack-ng:** Wireless attack automation
+- **Wireshark & tcpdump:** Packet capture and network forensics
+- **ESPHome & MicroPython:** IoT and automation scripting
+
 # ESP8266 Wireless Attack & Tracking Toolkit
 
 ## 📌 Overview
